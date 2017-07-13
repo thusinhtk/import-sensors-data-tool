@@ -26,7 +26,8 @@ namespace ImportDataTool
         int intervalInSecond;
         int minHeartRate;
         int maxHeartRate;
-        bool isRequestedToStop = false;
+        double timeToPostInSecond = 1 * 60;
+        bool isProcessRunning = false;
         string deviceUID;
 
         RestClient rc;
@@ -37,6 +38,22 @@ namespace ImportDataTool
             this.Loaded += MainWindow_Loaded;
         }
 
+        public bool IsProcessRunning 
+        { 
+            get 
+            {
+                return isProcessRunning;
+            }
+
+            set 
+            {
+                isProcessRunning = value;
+
+                Button_StartStreaming.IsEnabled = !isProcessRunning;
+                Button_EndStreaming.IsEnabled = isProcessRunning;
+            } 
+        }
+
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             intervalInSecond = Convert.ToInt32(ConfigurationManager.AppSettings["Interval"].ToString());
@@ -44,25 +61,38 @@ namespace ImportDataTool
             maxHeartRate = Convert.ToInt32(ConfigurationManager.AppSettings["MaxHeartRate"].ToString());
             deviceUID = ConfigurationManager.AppSettings["DeviceUID"].ToString();
             windDataServiceURL = string.Format(ConfigurationManager.AppSettings["WindDataService"].ToString(), deviceUID);
-
+            timeToPostInSecond = Convert.ToInt32(ConfigurationManager.AppSettings["TimeToPostInMinute"].ToString()) * 60;
+            
             rc = new RestClient(windDataServiceURL, HttpVerb.POST, "application/json");
+
+            IsProcessRunning = false;
         }
 
         private void Button_StartStreaming_Click(object sender, RoutedEventArgs e)
         {
-            isRequestedToStop = false;
+            ResetScreen();
 
             Thread thread = new Thread(new ThreadStart(DoPost));
             thread.IsBackground = true;
             thread.Start();
         }
 
+        private void ResetScreen()
+        {
+            IsProcessRunning = true;
+            pbStatus.Value = 0;
+            ListBox_History.Items.Clear();
+        }
+
         private void DoPost()
         {
+            DateTime dtStart = DateTime.Now;
             Random rd = new Random();
+            int count = 0;
 
-            while (!isRequestedToStop)
+            while (isProcessRunning)
             {
+                DateTime dt = DateTime.UtcNow;
                 long timeStamp = CurrentMillis.Millis;
                 int value = rd.Next(minHeartRate, maxHeartRate);
                 int quality = 3;
@@ -84,7 +114,15 @@ namespace ImportDataTool
 
                 Application.Current.Dispatcher.Invoke(new Action(() =>
                 {
-                    ListBox_History.Items.Insert(0, string.Format("TimeStamp: {0}, value: {1}, quality: {2})", timeStamp, value, quality));
+                    ListBox_History.Items.Insert(0, string.Format("{0}. TimeStamp: {1} - {2},   HeartRate: {3},   Quality: {4})", (++count).ToString("x2"), dt.ToString(), timeStamp, value, quality));
+
+                    Double percent = ((DateTime.Now - dtStart).TotalSeconds / timeToPostInSecond) * 100;
+                    pbStatus.Value = percent;
+
+                    if(pbStatus.Value >= 100)
+                    {
+                        IsProcessRunning = false;
+                    }
                 }));
 
 
@@ -95,7 +133,7 @@ namespace ImportDataTool
 
         private void Button_EndStreaming_Click(object sender, RoutedEventArgs e)
         {
-            isRequestedToStop = true;
+            IsProcessRunning = false;
         }
     }
 
