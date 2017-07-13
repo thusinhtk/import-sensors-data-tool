@@ -1,0 +1,13 @@
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\bin\Debug\ImportDataTool.exe.config
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\MainWindow.baml
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\MainWindow.g.cs
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\App.g.cs
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool_MarkupCompile.cache
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.g.resources
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.Properties.Resources.resources
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.csproj.GenerateResource.Cache
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\bin\Debug\ImportDataTool.exe
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\bin\Debug\ImportDataTool.pdb
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.exe
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.pdb
+D:\Study\Predix\predix\ImportDataTool\ImportDataTool\obj\Debug\ImportDataTool.csprojResolveAssemblyReference.cache
