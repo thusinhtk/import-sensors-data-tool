@@ -105,8 +105,12 @@ namespace ImportDataTool
                                                                     "\"value\": {1}," + 
                                                                     "\"quality\": {2} " +
                                                                 "}}" +
-                                                        "]" + 
-                                                  "}}", timeStamp.ToString(), value.ToString(), quality.ToString());
+                                                        "]," +
+                                                        "\"attributes\":" +
+                                                        "{{" +
+                                                            "\"sensorDataType\": \"{3}\"" +
+                                                        "}}" +
+                                                  "}}", timeStamp.ToString(), value.ToString(), quality.ToString(), SensorDataTypeEnum.HeartRate.ToString());
 
                 rc.PostData = postData;
 
@@ -142,5 +146,12 @@ namespace ImportDataTool
         private static readonly DateTime Jan1St1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         /// <summary>Get extra long current timestamp</summary>
         public static long Millis { get { return (long)((DateTime.UtcNow - Jan1St1970).TotalMilliseconds); } }
+    }
+
+    public enum SensorDataTypeEnum
+    {
+        HeartRate = 0,
+        Step = 1,    
+        BloodSugar = 2        
     }
 }
