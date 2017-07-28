@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\Working\PoC\IoT\import-sensors-data-tool\ImportDataTool\ImportDataTool\obj\Debug\
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportDataTool\obj\Debug\
 ImportDataTool
 none
 false
 DEBUG;TRACE
-D:\Working\PoC\IoT\import-sensors-data-tool\ImportDataTool\ImportDataTool\App.xaml
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportDataTool\App.xaml
 11151548125
 
-10-379960100
+10-1285041421
 13-1093145242
 MainWindow.xaml;
 

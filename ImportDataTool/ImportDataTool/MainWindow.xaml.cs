@@ -96,13 +96,13 @@ namespace ImportDataTool
                 long timeStamp = CurrentMillis.Millis;
                 int value = rd.Next(minHeartRate, maxHeartRate);
                 int quality = 3;
-                
-                string postData = string.Format("{{" + 
+
+                string postData = string.Format("{{" +
                                                         "\"dataPoints\":" +
                                                         "[" +
-                                                                "{{" +  
+                                                                "{{" +
                                                                     "\"timeStamp\": {0}," +
-                                                                    "\"value\": {1}," + 
+                                                                    "\"value\": {1}," +
                                                                     "\"quality\": {2} " +
                                                                 "}}" +
                                                         "]," +
@@ -110,7 +110,7 @@ namespace ImportDataTool
                                                         "{{" +
                                                             "\"sensorDataType\": \"{3}\"" +
                                                         "}}" +
-                                                  "}}", timeStamp.ToString(), value.ToString(), quality.ToString(), SensorDataTypeEnum.HeartRate.ToString());
+                                                  "}}", timeStamp.ToString(), value.ToString(), quality.ToString(), "HeartRate");
 
                 rc.PostData = postData;
 
@@ -118,7 +118,7 @@ namespace ImportDataTool
 
                 Application.Current.Dispatcher.Invoke(new Action(() =>
                 {
-                    ListBox_History.Items.Insert(0, string.Format("{0}. TimeStamp: {1} - {2},   HeartRate: {3},   Quality: {4})", (++count).ToString("x2"), dt.ToString(), timeStamp, value, quality));
+                    ListBox_History.Items.Insert(0, string.Format("{0}. TimeStamp: {1} - {2},   HeartRate: {3},   Quality: {4})", (++count).ToString("00"), dt.ToString(), timeStamp, value, quality));
 
                     Double percent = ((DateTime.Now - dtStart).TotalSeconds / timeToPostInSecond) * 100;
                     pbStatus.Value = percent;
@@ -146,12 +146,5 @@ namespace ImportDataTool
         private static readonly DateTime Jan1St1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         /// <summary>Get extra long current timestamp</summary>
         public static long Millis { get { return (long)((DateTime.UtcNow - Jan1St1970).TotalMilliseconds); } }
-    }
-
-    public enum SensorDataTypeEnum
-    {
-        HeartRate = 0,
-        Step = 1,    
-        BloodSugar = 2        
     }
 }

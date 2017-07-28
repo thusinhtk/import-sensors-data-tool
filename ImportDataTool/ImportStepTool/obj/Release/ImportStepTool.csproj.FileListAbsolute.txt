@@ -1,0 +1,12 @@
+D:\Working\Predix\POC\predix-import-data-tool\bin\Release\ImportStepTool.exe.config
+D:\Working\Predix\POC\predix-import-data-tool\bin\Release\ImportStepTool.exe
+D:\Working\Predix\POC\predix-import-data-tool\bin\Release\ImportStepTool.pdb
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\MainWindow.baml
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\MainWindow.g.cs
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\App.g.cs
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool_MarkupCompile.cache
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool.g.resources
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool.Properties.Resources.resources
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool.csproj.GenerateResource.Cache
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool.exe
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportStepTool\obj\Release\ImportStepTool.pdb

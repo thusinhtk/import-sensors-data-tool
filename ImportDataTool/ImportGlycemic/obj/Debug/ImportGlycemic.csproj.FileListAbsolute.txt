@@ -1,0 +1,12 @@
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\MainWindow.baml
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\MainWindow.g.cs
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\App.g.cs
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic_MarkupCompile.cache
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic.g.resources
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic.Properties.Resources.resources
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic.csproj.GenerateResource.Cache
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\bin\Debug\ImportGlycemic.exe.config
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\bin\Debug\ImportGlycemic.exe
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\bin\Debug\ImportGlycemic.pdb
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic.exe
+D:\Working\Predix\POC\predix-import-data-tool\ImportDataTool\ImportGlycemic\obj\Debug\ImportGlycemic.pdb
